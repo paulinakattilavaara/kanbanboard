@@ -1,11 +1,12 @@
-const Card = ({ card }) => {
+const Card = ({ card, date }) => {
   const editCard = () => {
     console.log("Du klickade på kortet.");
   };
 
   return (
     <div className="Card" onClick={editCard}>
-      {card}
+      <p className="Card-text">{card}</p>
+      <p className="Card-date">{date}</p>
     </div>
   );
 };

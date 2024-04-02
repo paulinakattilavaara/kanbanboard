@@ -1,20 +1,22 @@
 import { FaPlus } from "react-icons/fa";
 import { useState } from "react";
 
-const Button = ({ text, addCard }) => {
+const Button = ({ text, addCard, addDate }) => {
   const [task, setTask] = useState([]);
   const [showForm, setShowForm] = useState(false);
-  // const [cards, setCards] = useState([]);
 
   const handleForm = () => {
     setShowForm(true);
   };
 
   const handleSubmit = (e) => {
+    const now = new Date().toLocaleDateString();
     e.preventDefault();
     setShowForm(false);
     addCard(task);
+    addDate(now);
     setTask("");
+    console.log(now);
     console.log(task);
   };
 
