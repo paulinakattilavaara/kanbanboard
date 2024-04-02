@@ -41,7 +41,8 @@ main {
 }
 
 .Card,
-.Button {
+.Button,
+.addTaskBtn {
   background-color: rgba(255, 255, 255, 0.91);
   width: 90%;
   border-radius: 7px;
@@ -52,10 +53,12 @@ main {
   box-shadow: 2px 2px rgba(140, 140, 140, 0.153);
 }
 
-.Button {
+.Button,
+.addTaskBtn {
   border: none;
   font-family: Lora, serif;
   background-color: rgba(182, 179, 179, 0.726);
+  font-size: 0.9rem;
 }
 
 .Button:hover {
@@ -64,4 +67,31 @@ main {
 
 .icon {
   margin-right: 0.5rem;
+}
+
+.addTaskBtn {
+  border-radius: 2rem;
+  width: 10rem;
+  padding: 0.6rem;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.taskInput {
+  width: 100%;
+  padding: 0.4rem;
+  border: none;
+  margin: 0.5rem;
+}
+
+.taskForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+.taskInput:focus {
+  outline: none;
 }
