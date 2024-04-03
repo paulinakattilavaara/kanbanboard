@@ -19,7 +19,8 @@ const Column = ({ title }) => {
 
   const addDate = (newDate) => {
     setDate(newDate);
-  };
+    };
+
 
   return (
     <div className="Column">
