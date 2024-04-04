@@ -4,7 +4,7 @@ import "./underpage.css";
 const Done = () => {
   return (
     <main>
-      <Column title="Done" />
+      <Column title="Done" id={3} />
     </main>
   );
 };

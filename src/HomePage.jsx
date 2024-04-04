@@ -4,9 +4,9 @@ const HomePage = () => {
 
   return (
     <main>
-      <Column title="Todo" />
-      <Column title="Doing" />
-      <Column title="Done" />
+      <Column title="Todo" id={1} />
+      <Column title="Doing" id={2} />
+      <Column title="Done" id={3} />
     </main>
   );
 };

@@ -1,18 +1,23 @@
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import { useState } from "react";
+import Popup from "./Popup";
 
-const Card = ({ card, date }) => {
+const Card = ({ card, date, moveRight, moveLeft, id, deleteCard }) => {
+  const [showPopup, setShowPopup] = useState(false);
+
   const editCard = () => {
     console.log("Du klickade på kortet.");
+    setShowPopup(true);
   };
 
-  const moveLeft = (event) => {
+  const handleClose = (event) => {
     event.stopPropagation();
-    console.log("du klickade på vänster pil.");
+    setShowPopup(false);
   };
 
-  const moveRight = (event) => {
+  const handleDelete = (event) => {
     event.stopPropagation();
-    console.log("du klickade på höger pil.");
+    deleteCard(id);
   };
 
   return (
@@ -27,6 +32,14 @@ const Card = ({ card, date }) => {
           <FaArrowAltCircleRight />
         </button>
       </div>
+      {showPopup && (
+        <Popup
+          onClose={handleClose}
+          onDelete={handleDelete}
+          card={card}
+          date={date}
+        />
+      )}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import "./underpage.css";
 const Todo = () => {
   return (
     <main>
-      <Column title="Todo" />
+      <Column title="Todo" id={1} />
     </main>
   );
 };
